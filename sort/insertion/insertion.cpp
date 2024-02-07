@@ -23,7 +23,7 @@ std::vector<int> insertion_sort(std::vector<int> l) {
 }
 
 int main() {
-  std::vector<int> test_vector = {5, 2, 9, 1, 6};
+  std::vector<int> test_vector = {9, 5, 3, 7, 2, 8, 4, 1, 6, 0};
 
   std::cout << "Original vector:";
   for (int i = 0; i < test_vector.size(); i++) {
