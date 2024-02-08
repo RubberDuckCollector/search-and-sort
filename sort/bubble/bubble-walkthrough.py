@@ -23,8 +23,9 @@ class Color:
     Reverse = "\033[7m"
     Reset = "\033[0m"
 
-
 # returns a tuple of the sorted list and the number of passes it took
+
+
 def bubble_sort_walkthrough(input_list: list) -> tuple:
     pass_num = 0
     for i in range(len(input_list) - 1):
@@ -33,10 +34,10 @@ def bubble_sort_walkthrough(input_list: list) -> tuple:
         for j in range(len(input_list) - i - 1):
             print(f"the list: {Color.Cyan}{input_list}{Color.Reset}")
             print("")
-            input(f"{Color.LightRed}Current{Color.Reset} value we're looking at: {Color.Yellow}{
+            input(f"{Color.Red}Current{Color.Reset} value we're looking at: {Color.Yellow}{
                   input_list[j]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.Underline}{Color.LightBlue}{j}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
             print("")
-            input(f"Value at the {Color.LightRed}next index{Color.Reset} of the list: {Color.Yellow}{
+            input(f"Value at the {Color.Red}next index{Color.Reset} of the list: {Color.Yellow}{
                 input_list[j + 1]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.LightBlue}{Color.Underline}{j + 1}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
             print("")
             if input_list[j] > input_list[j + 1]:  # if a swap needs to be made
@@ -51,7 +52,7 @@ def bubble_sort_walkthrough(input_list: list) -> tuple:
                 input(f"{Color.LightGreen}{Color.Underline}{input_list[j]} < {input_list[j + 1]}: No swaps need to be made.{Color.Reset} {
                     Color.Dim}(press ENTER to continue){Color.Reset}")
                 print("")
-
+    print("")
     sorted_list = input_list
 
     return sorted_list, pass_num
