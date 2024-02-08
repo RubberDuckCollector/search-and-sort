@@ -64,7 +64,7 @@ def insertion_sort(l: list):
 
 def main():
 
-    nums = [3, 10, 4, 2, 5, 8]
+    nums = [9, 5, 3, 7, 2, 8, 4, 1, 6, 0]
     print(insertion_sort(nums))
 
     # nums2 = [randint(0, 100) for i in range(15)]
