@@ -2,8 +2,11 @@ from random import randint
 
 
 # takes list parameter and return type is list
+# denoted after '->'
 def bubble_sort(l: list) -> list:  # l means list
+
     for i in range(len(l) - 1):
+
         # the inner loop is the one that the swaps are made off of
         # the -1 is there to make sure that the swaps are being made within the index
         # boundaries of the list
@@ -11,6 +14,7 @@ def bubble_sort(l: list) -> list:  # l means list
         # (if we use the i loop, the algorithm will check
         # the last element with the element after that which is out of bounds)
         # and even if we do -1 in the i loop, it won't run enough passes on the list to fully sort it
+
         for j in range(len(l) - i - 1):
             # if the element being checked is larger than the one after it:
             if l[j] > l[j + 1]:
