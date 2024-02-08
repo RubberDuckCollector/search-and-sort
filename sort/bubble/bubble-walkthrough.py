@@ -32,7 +32,7 @@ def bubble_sort_walkthrough(input_list: list) -> tuple:
         pass_num += 1
         print(f"{Color.Yellow}PASS {pass_num}{Color.Reset}")
         for j in range(len(input_list) - i - 1):
-            print(f"the list: {Color.Cyan}{input_list}{Color.Reset}")
+            print(f"The list: {Color.Cyan}{input_list}{Color.Reset}")
             print("")
             input(f"{Color.Red}Current{Color.Reset} value we're looking at: {Color.Yellow}{
                   input_list[j]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.Underline}{Color.LightBlue}{j}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
