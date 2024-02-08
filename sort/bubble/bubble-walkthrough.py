@@ -24,7 +24,8 @@ class Color:
     Reset = "\033[0m"
 
 
-def bubble_sort_walkthrough(input_list: list) -> list:
+# returns a tuple of the sorted list and the number of passes it took
+def bubble_sort_walkthrough(input_list: list) -> tuple:
     pass_num = 0
     for i in range(len(input_list) - 1):
         pass_num += 1
@@ -36,7 +37,7 @@ def bubble_sort_walkthrough(input_list: list) -> list:
                   input_list[j]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.Underline}{Color.LightBlue}{j}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
             print("")
             input(f"Value at the {Color.LightRed}next index{Color.Reset} of the list: {Color.Yellow}{
-                input_list[j + 1]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.LightBlue}{j + 1}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
+                input_list[j + 1]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.LightBlue}{Color.Underline}{j + 1}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
             print("")
             if input_list[j] > input_list[j + 1]:  # if a swap needs to be made
                 input(
@@ -53,7 +54,7 @@ def bubble_sort_walkthrough(input_list: list) -> list:
 
     sorted_list = input_list
 
-    return sorted_list
+    return sorted_list, pass_num
 
 
 def main():
@@ -61,7 +62,9 @@ def main():
 
     nums = [9, 5, 3, 7, 2, 8, 4, 1, 6, 0]
     print("Sorted list:")
-    print(bubble_sort_walkthrough(nums))
+    sorted_nums = bubble_sort_walkthrough(nums)
+    print(f"Algorithm exited after {
+          sorted_nums[1]} passes. Sorted list:\n{sorted_nums[0]}")
 
 
 if __name__ == '__main__':
