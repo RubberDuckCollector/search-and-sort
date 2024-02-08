@@ -39,23 +39,6 @@ def bubble_sort_no_shorthand(l: list) -> list:
     return l
 
 
-def bubble_sort_walkthrough(input_list: list) -> list:
-    for i in range(len(input_list) - 1):
-        for j in range(len(input_list) - i - 1):
-            if input_list[j] > input_list[j + 1]:
-                input(
-                    "swap the current value with the one after it! (press ENTER to continue)")
-                # normal way to swap variables
-                temp = input_list[j]
-                input_list[j] = input_list[j + 1]
-                input_list[j + 1] = temp
-            else:
-                input("no swaps need to be made. (press ENTER to continue)")
-
-    sorted_list = input_list
-    return sorted_list
-
-
 def main():
     nums = [9, 5, 3, 7, 2, 8, 4, 1, 6, 0]
 
