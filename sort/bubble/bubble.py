@@ -21,7 +21,7 @@ def bubble_sort(l: list) -> list:  # l means list
 
 
 def bubble_sort_no_shorthand(l: list) -> list:
-    for i in range(len(l)):
+    for i in range(len(l) - 1):
         for j in range(len(l) - i - 1):
             if l[j] > l[j + 1]:
                 # normal way to swap variables
@@ -40,22 +40,13 @@ def main():
 
     nums2 = [randint(0, 100) for i in range(15)]
 
-    # print(f"nums = {nums}")
-
-    # print(f"sorted nums = {bubble_sort(nums)}")
-
-    # print(f"nums2 = {nums2}")
-
-    # print(f"sorted nums2 = {bubble_sort(nums2)}")
-
     print(f"nums = {nums}")
 
     print(f"sorted nums = {bubble_sort(nums)}")
 
-    # print(f"nums2 = {nums2}")
+    print(f"nums2 = {nums2}")
 
-    # print(f"sorted nums2 = {bubble_sort_no_shorthand(nums2)}")
-    # nums = [23, 1, 45, 4, 7, 7, 3, 3, 2, 4, 9]
+    print(f"sorted nums2 = {bubble_sort(nums2)}")
 
 
 if __name__ == '__main__':
