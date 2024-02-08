@@ -13,7 +13,7 @@ def bubble_sort(l: list) -> list:  # l means list
 
         # (if we use the i loop, the algorithm will check
         # the last element with the element after that which is out of bounds)
-        # and even if we do -1 in the i loop, it won't run enough passes on the list to fully sort it
+        # len(l) - i - 1 is the most efficient range of the inner loop
 
         for j in range(len(l) - i - 1):
             # if the element being checked is larger than the one after it:
