@@ -19,8 +19,11 @@ void insertion_sort(int *arr, int length) {
 }
 
 int main() {
+  // 10 is being extra specific on how many elements there are in the array
+  // can help with readability on large arrays, only have to look at the num
   int test_array[10] = {9, 5, 3, 7, 2, 8, 4, 1, 6, 0};
 
+  // size_t is actually just an unsigned long
   size_t test_array_len = sizeof(test_array) / sizeof(test_array[0]);
 
   printf("unsorted:\n");
@@ -30,6 +33,19 @@ int main() {
 
   printf("\nsorted:\n");
 
+  // don't need to pass &test_array here
+  // because binary_search() expects a pointer to the first element of the
+  // array which is what is passed here, with just `test_array`. no baggage.
+
+  // if `&test_array` is passed, binary_search() would receive the address of
+  // the entire array,
+  // which would lead to incorrect behaviour -> a logic error
+  // (colloquially named a runtime error outside of OCR land)
+
+  // theory: you only need to pass the address of the first element
+  // because array elements are stored in contiguous space in memory,
+  // meaning that the compiler can work out where the rest of the elements
+  // are
   insertion_sort(test_array, test_array_len);
 
   for (int i = 0; i < test_array_len; i++) {

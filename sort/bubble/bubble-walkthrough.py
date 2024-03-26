@@ -40,7 +40,11 @@ def bubble_sort_walkthrough(input_list: list) -> tuple:
             input(f"Value at the {Color.Red}next index{Color.Reset} of the list: {Color.Yellow}{
                 input_list[j + 1]}{Color.Reset} ({Color.Dim}index{Color.Reset} {Color.LightBlue}{Color.Underline}{j + 1}{Color.Reset}) {Color.Dim}(press ENTER to continue){Color.Reset}")
             print("")
-            if input_list[j] > input_list[j + 1]:  # if a swap needs to be made
+            if input_list[j] < input_list[j + 1]:
+                input(f"{Color.LightGreen}{Color.Underline}{input_list[j]} < {input_list[j + 1]}: No swaps need to be made.{Color.Reset} {
+                    Color.Dim}(press ENTER to continue){Color.Reset}")
+                print("")
+            else:
                 input(
                     f"{Color.Underline}{Color.LightMagenta}The current value is bigger than the one after it! Swap them!{Color.Reset} {Color.Dim}(press ENTER to continue){Color.Reset}")
                 print("")
@@ -48,10 +52,6 @@ def bubble_sort_walkthrough(input_list: list) -> tuple:
                 temp = input_list[j]
                 input_list[j] = input_list[j + 1]
                 input_list[j + 1] = temp
-            else:
-                input(f"{Color.LightGreen}{Color.Underline}{input_list[j]} < {input_list[j + 1]}: No swaps need to be made.{Color.Reset} {
-                    Color.Dim}(press ENTER to continue){Color.Reset}")
-                print("")
     print("")
     sorted_list = input_list
 
